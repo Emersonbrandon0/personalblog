@@ -1,0 +1,113 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background: #FAFAFA;
+	color:#404137;
+}
+.container{
+	width: 90%;
+	margin: 20px auto;
+	padding: 20px;
+	border: 1px solid #ccc;
+}
+.clr{
+	clear:both;
+}
+nav{
+	text-align: right;
+	font-size: 18px;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin:0;
+  overflow:hidden;
+}
+h1,h2,h3,p{
+	padding: 5px 0;
+	margin-bottom: 0;
+}
+p{
+	margin: 0;
+}
+li{
+	margin:0 auto;
+	display:block;
+	text-align:center;
+	padding:15px;
+	text-decoration: none;
+	display:inline-block;
+	font-size: 20px;
+}
+li:hover{
+	background-color:#ccc;
+}
+a{
+  text-align:center;
+  text-decoration:none;
+  color:#404137;
+}
+.meta{
+	padding: 7px;
+	border: 1px solid #ccc;
+	background: #ccc
+}
+a.more{
+	margin-top: 40px;
+	display: block;
+	background: #404137;
+	color: #fff;
+	padding: 10px;
+}
+a:hover{
+	text-decoration: none;
+}
+.post{
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 10px;
+}
+.post img{
+	width: 100%;
+	display: inline;
+}
+.menu{
+	color: #404137;
+}
+.addPost .form-group{
+	padding-bottom: 20px;
+}
+label{
+	display: inline-block;
+	width: 180px;
+}
+input[type=text],select,textarea{
+	padding: 3px;
+	height: 20px;
+	width:200px;
+	border: 1px #ccc solid;
+}
+select{
+	height: 28px;
+}
+textarea{
+	height: 70px;
+	width:400px;
+}
+.category{
+	color: green;
+}
+.col-md-2 .category{
+	text-align: right;
+	font-style: italic;
+	font-size: 20px;
+}
+.postTitle{
+	text-transform: uppercase;
+}
+.headlines{
+	color: #7a7a7a;
+}

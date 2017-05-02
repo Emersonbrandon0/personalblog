@@ -1,0 +1,11 @@
+extends layout
+
+block content
+	.show
+		.post
+			h1=post.title
+			p.meta Posted in 
+				a.category(href="/categories/show/#{post.category}") #{post.category} 
+				by by #{post.author} on #{moment(post.date).format('MM/DD/YYYY')}
+			img(src='/images/uploads/#{post.mainImage}')
+			!=post.body

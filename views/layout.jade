@@ -1,0 +1,20 @@
+doctype html
+html
+	head
+		title Amazing Blog
+		link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+		link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Roboto')
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		
+	body
+		nav
+			ul
+				li
+					a.menu(href="/") Home
+				li
+					a.menu(href="/posts/add") Add Post
+				li
+					a.menu(href="/categories/add") Add Category
+		.container
+			block content
+

@@ -1,0 +1,31 @@
+extends layout
+
+block content
+	.col-md-9.homePagePosts
+		h1.headlines RECENT POSTS
+		if posts
+		each post, i in posts
+			.post.row
+				h2.postTitle
+					a(href="/posts/show/#{post._id}") #{post.title}
+				p.meta Posted in 
+					a.category(href="/categories/show/#{post.category}") #{post.category} 
+					by by #{post.author} on #{moment(post.date).format('MM/DD/YYYY')}
+				.col-md-5
+					img(src='/images/uploads/#{post.mainImage}')
+				.col-md-7
+					!=truncateText(post.body,500)
+					a.more(href="/posts/show/#{post._id}") Read More
+		else
+			p.noPosts There are no posts to display
+	.col-md-3
+		h1.headlines CATEGORIES
+		if categories
+			each category, i in categories
+				.category
+					a.category(href="/categories/show/#{category.title}") #{category.title} 
+		else
+			p.noPosts There are no posts to display
+
+
+				
