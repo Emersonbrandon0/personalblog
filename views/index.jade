@@ -1,6 +1,8 @@
 extends layout
 
 block content
+	.topImage
+		h1 Everything at Once
 	.col-md-9.homePagePosts
 		h1.headlines RECENT POSTS
 		if posts
@@ -26,6 +28,7 @@ block content
 					a.category(href="/categories/show/#{category.title}") #{category.title} 
 		else
 			p.noPosts There are no posts to display
+		.sideImage
 
 
 				
