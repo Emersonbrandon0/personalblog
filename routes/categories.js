@@ -3,6 +3,7 @@ var router = express.Router();
 var mongo=require("mongodb");
 var db=require("monk")('localhost/nodeblog');
 var posts = db.get('posts');
+var categories = db.get('categories');
 
 /* GET home page. */
 router.get('/add', function(req, res, next) {
@@ -12,10 +13,13 @@ router.get('/add', function(req, res, next) {
 router.get('/show/:category', function(req, res, next) {
 	var posts=db.get('posts');
 	posts.find({category:req.params.category},{},function(err,posts){
-		res.render('index',{
-			'title':req.params.category,
-			'posts':posts
-		});
+		categories.find({},{},function(err,categories){
+			res.render('index',{
+				'title':req.params.category,
+				'posts':posts,
+				"categories":categories
+			});	
+		})
 	});
 });
 

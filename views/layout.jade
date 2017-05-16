@@ -3,18 +3,23 @@ html
 	head
 		title Everything at Once
 		link(rel='stylesheet', href='/stylesheets/bootstrap.css')
-		link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Open+Sans')
+		link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Oswald')
+		link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Domine')
 		link(rel='stylesheet', href='/stylesheets/style.css')
 		
 	body
 		nav
 			ul
 				li
-					a.menu(href="/") Home
+					a.menu(href="/") Home /
 				li
-					a.menu(href="/posts/add") Add Post
+					a.menu(href="/") Recent Posts /
 				li
-					a.menu(href="/categories/add") Add Category
+					a.menu(href="/posts/add") Add Post /
+				li
+					a.menu(href="/categories/add") Add Category /
+				li
+					a.menu(href="/") About
 		.container
 			block content
 		.footer

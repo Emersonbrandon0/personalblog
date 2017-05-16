@@ -1,8 +1,11 @@
 extends layout
 
+
 block content
 	.topImage
-		h1 Everything at Once
+		h1.blogTitle Everything at Once
+		p.quote Vision without action is merely a dream. Action without vision just passes the time. Vision with action can change the world. 
+		p.quoteAuthor -Joel A. Barker
 	.col-md-9.homePagePosts
 		h1.headlines RECENT POSTS
 		if posts
@@ -13,15 +16,15 @@ block content
 				p.meta Posted in 
 					a.category(href="/categories/show/#{post.category}") #{post.category} 
 					by by #{post.author} on #{moment(post.date).format('MM/DD/YYYY')}
-				.col-md-5
+				.col-md-4
 					img(src='/images/uploads/#{post.mainImage}')
-				.col-md-7
+				.col-md-8
 					!=truncateText(post.body,500)
 					a.more(href="/posts/show/#{post._id}") Read More
 		else
 			p.noPosts There are no posts to display
 	.col-md-3
-		h1.headlines CATEGORIES
+		h1.headlines#categories CATEGORIES
 		if categories
 			each category, i in categories
 				.category
