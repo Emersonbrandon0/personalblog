@@ -5,20 +5,30 @@ var logger = require('morgan');
 var expressValidator=require("express-validator");
 var cookieParser = require('cookie-parser');
 var session=require("express-session");
+var passport=require('passport');
+var localStrategy=require('passport-local').Strategy;
 var mongo=require("mongodb");
 var db=require("monk")('localhost/nodeblog');
+var mongoose=require('mongoose');
+var db2=mongoose.connection;
 var multer=require("multer");
 var flash=require("connect-flash");
 var bodyParser = require('body-parser');
+var bcrypt = require('bcryptjs');
 
 var index = require('./routes/index');
 var posts = require('./routes/posts');
 var categories = require('./routes/categories');
+var admin = require('./routes/admin');
 
 var app = express();
 
 app.locals.moment=require('moment');
 app.locals.truncateText = function(text,length){
+  if(text.length<500){
+    var truncatedText=text;
+    return truncatedText;
+  }
   var truncatedText=text.substring(0,length)+'...';
   return truncatedText;
 }
@@ -43,6 +53,10 @@ app.use(session({
 	saveUninitialized:true,
 	resave:true
 }));
+
+//Passport
+app.use(passport.initialize());
+app.use(passport.session());
 
 //Validator
 app.use(expressValidator({
@@ -73,6 +87,7 @@ app.use(function (req, res, next) {
 app.use('/', index);
 app.use('/posts', posts);
 app.use('/categories', categories);
+app.use('/admin', admin);
 
 app.use(function(req,res,next){
 	req.db=db;

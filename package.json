@@ -20,6 +20,11 @@
     "express-session":"*",
     "express-messages":"*",
     "multer":"*",
-    "moment":"*"
+    "mongoose": "*",
+    "passport": "*",
+    "passport-http": "*",
+    "passport-local": "*",
+    "moment":"*",
+    "bcryptjs": "^2.4.3"
   }
 }

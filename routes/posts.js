@@ -28,7 +28,7 @@ router.get('/show/:id', function(req, res, next) {
 
 
 /* GET users listing. */
-router.get('/add', function(req, res, next) {
+router.get('/add', ensureAuthenticated,  function(req, res, next) {
 	var categories=db.get('categories');
 	categories.find({},{},function(err,categories){
   	res.render('addpost',{
@@ -37,6 +37,13 @@ router.get('/add', function(req, res, next) {
   		});
 	});
 });
+
+function ensureAuthenticated(req,res,next){
+	if(req.isAuthenticated()){
+		return next();
+	}
+	res.redirect('/admin/login');
+};
 
 router.post('/add', upload.single('mainImage'), function(req,res,next){
 	//Get form values

@@ -2,11 +2,15 @@
 	padding: 0px;
 	margin: 0px;
 }
-
+html {
+    position: relative;
+    min-height: 100%;
+}
 body {
 	font-family: 'Oswald', sans-serif;
 	font-weight: 100;
 	color:#404137;
+	margin: 0 0 60px;
 	/*background: url('/images/background1.jpg');
 	background-size: 100% 100%;
 	background-attachment: fixed;
@@ -64,8 +68,7 @@ a{
 a.more{
 	margin-top: 40px;
 	display: block;
-	background: #404137;
-	color: #fff;
+	background:#DAA520;
 	padding: 10px;
 }
 a:hover{
@@ -90,10 +93,21 @@ label{
 	display: inline-block;
 	width: 180px;
 }
-input[type=text],select,textarea{
+input,select,textarea{
 	padding: 3px;
 	height: 20px;
 	width:200px;
+	border: 1px #ccc solid;
+}
+.btn{
+	padding: 3px;
+	height: 30px;
+	width:200px;
+	border: 1px #ccc solid;
+}
+.imageInput{
+	padding: 10px;
+	height: 50px;
 	border: 1px #ccc solid;
 }
 select{
@@ -150,6 +164,11 @@ textarea{
 	margin-top: 20px;
 	padding: 20px;
 	background: #ccc;
+	position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
 }
 
 ul li {
@@ -177,4 +196,16 @@ ul li {
 }
 .postImage{
 	height: 350px;
+}
+.blogFooter{
+	font-style: italic;
+	display: inline;
+}
+.adminLogin{
+	display: inline-block;
+	position: absolute;
+	right: 20px;
+}
+.usernameAndPassword{
+	width: 650px;
 }

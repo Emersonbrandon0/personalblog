@@ -6,9 +6,16 @@ var posts = db.get('posts');
 var categories = db.get('categories');
 
 /* GET home page. */
-router.get('/add', function(req, res, next) {
+router.get('/add', ensureAuthenticated, function(req, res, next) {
 	res.render('addcategory',{'title':'Add Category'});	
 });
+
+function ensureAuthenticated(req,res,next){
+	if(req.isAuthenticated()){
+		return next();
+	}
+	res.redirect('/admin/login');
+};
 
 router.get('/show/:category', function(req, res, next) {
 	var posts=db.get('posts');

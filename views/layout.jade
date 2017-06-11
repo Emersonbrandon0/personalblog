@@ -11,8 +11,6 @@ html
 		nav
 			ul
 				li
-					a.menu(href="/") Home /
-				li
 					a.menu(href="/") Recent Posts /
 				li
 					a.menu(href="/posts/add") Add Post /
@@ -23,5 +21,7 @@ html
 		.container
 			block content
 		.footer
-			&nbsp Thank you for visiting my blog! &copy 2017
-
+			&nbsp Thank you for visiting 
+			.blogFooter Everything at Once 
+			! &copy 2017
+			a.adminLogin(href="/admin/login") Admin Login
