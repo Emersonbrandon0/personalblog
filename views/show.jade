@@ -2,10 +2,12 @@ extends layout
 
 block content
 	.show
-		.post
-			h1=post.title
-			p.meta Posted in 
-				a.category(href="/categories/show/#{post.category}") #{post.category} 
-				by by #{post.author} on #{moment(post.date).format('MM/DD/YYYY')}
-			img.postImage(src='/images/uploads/#{post.mainImage}')
-			p.postContent!=post.body
+		.col-md-2
+		.col-md-8
+			.post
+				h1=post.title
+				p.meta Posted in 
+					a.category(href="/categories/show/#{post.category}") #{post.category} 
+					by by #{post.author} on #{moment(post.date).format('MM/DD/YYYY')}
+				img.postImage(src='/images/uploads/#{post.mainImage}')
+				!=post.body
