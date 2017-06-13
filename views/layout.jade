@@ -5,11 +5,14 @@ html
 		link(rel='stylesheet', href='/stylesheets/bootstrap.css')
 		link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Oswald')
 		link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Domine')
+		link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Open+Sans')
+		link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Montserrat:200,400')
 		link(rel='stylesheet', href='/stylesheets/style.css')
-		
+		link(rel='shortcut icon', href='images/favicon.ico', type='image/x-icon')
+		link(rel='icon', href='images/favicon.ico', type='image/x-icon')
 	body
 		nav
-			ul
+			ul.topNav
 				li
 					a.menu(href="/") Recent Posts /
 				li
@@ -17,7 +20,7 @@ html
 				li
 					a.menu(href="/categories/add") Add Category /
 				li
-					a.menu(href="/") About
+					a.menu(href="/about") About
 		.container
 			block content
 		.footer

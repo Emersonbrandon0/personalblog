@@ -9,7 +9,7 @@ html {
 body {
 	font-family: 'Oswald', sans-serif;
 	font-weight: 100;
-	color:#404137;
+	color:#111111;
 	margin: 0 0 60px;
 	/*background: url('/images/background1.jpg');
 	background-size: 100% 100%;
@@ -25,7 +25,7 @@ body {
 	clear:both;
 }
 nav{
-	text-align: right;
+	text-align: center;
 	margin-bottom:-30px; 
 }
 ul {
@@ -40,8 +40,8 @@ h1,h2,h3,p{
 }
 .blogTitle{
 	font-weight: 700;
-	color: yellow;
-	font-size: 150px;
+	color: white;
+	font-size: 100px;
 }
 p{
 	margin: 0;
@@ -54,8 +54,7 @@ li{
 	padding-right:10px;
 	text-decoration: none;
 	display:inline-block;
-	font-size: 30px;
-	font-weight: bold;
+	font-size: 22px;
 }
 a{
   text-align:center;
@@ -64,11 +63,12 @@ a{
 }
 .meta{
 	padding-left: 15px;
+	font-family: 'Open Sans', sans-serif;
 }
 a.more{
 	margin-top: 40px;
 	display: block;
-	background:#DAA520;
+	background:#DDDDDD;
 	padding: 10px;
 }
 a:hover{
@@ -82,9 +82,6 @@ a:hover{
 .post img{
 	width: 100%;
 	display: inline;
-}
-.menu{
-	color: #404137;
 }
 .addPost .form-group{
 	padding-bottom: 20px;
@@ -119,6 +116,7 @@ textarea{
 }
 .category{
 	color: green;
+	font-family: 'Open Sans', sans-serif;
 }
 .col-md-2 .category{
 	text-align: right;
@@ -131,7 +129,7 @@ textarea{
 	font-size: 350%
 }
 .headlines{
-	color: #7a7a7a;
+	color: #AAAAAA ;
 	font-weight: 100;
 	border-bottom: 1px solid #ccc;
 }
@@ -139,7 +137,8 @@ textarea{
 .topImage{
 	background: url('/images/background3.jpg');
 	background-size: 100% 100%;
-	height: 500px;
+	height: 300px;
+	opacity: .9;
 	color: white;
 	text-align: center;
 	font-style: italic;
@@ -171,21 +170,17 @@ textarea{
     width: 100%;
 }
 
-ul li {
-	font-style: italic;
-}
-
 .quote{
 	text-align: left;
 	text-transform: uppercase;
 	padding-left: 20px;
-	font-size: 50px;
-	color: yellow;
+	font-size: 33px;
+	color: white;
 	font-style: normal;
 	font-weight: bold;
 }
 .quoteAuthor{
-	color: yellow;
+	color:white;
 	text-align: right;
 	text-transform: uppercase;
 	margin-top: -20px;
@@ -208,4 +203,33 @@ ul li {
 }
 .usernameAndPassword{
 	width: 650px;
+}
+.login{
+	color:#111111;
+}
+.topNav li{
+	text-transform: lowercase;
+	font-family: 'Open Sans', sans-serif;
+	color: #AAAAAA;
+}
+.bio{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 170%;
+	font-weight: 200;
+	margin-top: 20px;
+}
+.contactInfo{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 170%;
+}
+.aboutPage{
+	margin-top: 20px;
+}
+.row{
+	padding-right: 20px;
+}
+.tags{
+	font-size: 250%;
+	padding-top: 20px;
+
 }

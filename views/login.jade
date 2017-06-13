@@ -2,12 +2,13 @@ extends layout
 
 block content
 	h2=title
-	p Please log in below
-	form(method="post",action="/admin/login")
-		.form-group
-			label Username
-			input.usernameAndPassword.form-control(name='username',type='text')
-		.form-group
-			label Password
-			input.usernameAndPassword.form-control(name='password',type='password')
-		input.btn.btn-default(name="submit",type="Submit",value="Login")
+	.login
+		p Please log in below
+		form(method="post",action="/admin/login")
+			.form-group
+				label Username
+				input.usernameAndPassword.form-control(name='username',type='text')
+			.form-group
+				label Password
+				input.usernameAndPassword.form-control(name='password',type='password')
+			input.btn.btn-default(name="submit",type="Submit",value="Login")

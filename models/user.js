@@ -1,6 +1,6 @@
 var mongoose=require('mongoose');
 var bcrypt = require('bcryptjs');
-mongoose.connect('mongodb://localhost/nodeblog');
+mongoose.connect('localhost/nodeblog');
 var db2=mongoose.connection;
 
 //Define schema

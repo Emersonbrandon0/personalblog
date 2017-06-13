@@ -10,6 +10,7 @@ var localStrategy=require('passport-local').Strategy;
 var mongo=require("mongodb");
 var db=require("monk")('localhost/nodeblog');
 var mongoose=require('mongoose');
+mongoose.connect('localhost/nodeblog');
 var db2=mongoose.connection;
 var multer=require("multer");
 var flash=require("connect-flash");
