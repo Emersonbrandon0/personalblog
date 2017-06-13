@@ -78,6 +78,8 @@ a:hover{
 .post{
 	border-bottom: 1px solid #ccc;
 	padding-bottom: 10px;
+	font-size: 120%;
+	font-family: 'Montserrat', sans-serif;
 }
 .post img{
 	width: 100%;
@@ -183,7 +185,7 @@ textarea{
 	color:white;
 	text-align: right;
 	text-transform: uppercase;
-	margin-top: -20px;
+	margin-top: -10px;
 	padding-right: 20px;	
 	font-family: 'Domine', serif;
 	font-size: 34px;
@@ -231,5 +233,132 @@ textarea{
 .tags{
 	font-size: 250%;
 	padding-top: 20px;
+}
+@media only screen and (max-width: 1100px) {
+	.quote{
+		padding-left: 20px;
+		font-size: 23px;
+	}
+	.quoteAuthor{
+		margin-top: 10px;
+		padding-right: 20px;	
+		font-size: 19px;
+	}
+	.blogTitle{
+		font-weight: 700;
+		color: white;
+		font-size: 50px;
+	}
+	.topImage{
+		height: 230px;
+		padding: 0px;
+		margin-top: -40px;
+		font-size: 60px;
+	}
+	.sideImage{
+		height: 250px;
+	}
+}
 
+@media only screen and (max-width: 780px) {
+	.quote{
+		padding-left: 20px;
+		font-size: 19px;
+	}
+	.quoteAuthor{
+		margin-top: 0px;
+		padding-right: 20px;	
+		font-size: 15px;
+	}
+	.blogTitle{
+		font-weight: 700;
+		color: white;
+		font-size: 40px;
+	}
+	.topImage{
+		height: 200px;
+		padding: 0px;
+		margin-top: -30px;
+		font-size: 60px;
+	}
+	.sideImage{
+		height: 250px;
+	}
+	.postTitle{
+		text-transform: uppercase;
+		font-style: italic;
+		font-size: 250%
+	}
+}
+
+@media only screen and (max-width: 580px) {
+	.quote{
+		padding-left: 20px;
+		font-size: 16px;
+	}
+	.quoteAuthor{
+		margin-top: 0px;
+		padding-right: 20px;	
+		font-size: 10px;
+	}
+	.blogTitle{
+		font-weight: 700;
+		color: white;
+		font-size: 40px;
+	}
+	.topImage{
+		height: 200px;
+		padding: 0px;
+		margin-top: -20px;
+		font-size: 60px;
+	}
+	.sideImage{
+		height: 250px;
+	}
+	.postTitle{
+		text-transform: uppercase;
+		font-style: italic;
+		font-size: 200%
+	}
+	.aboutPage{
+		margin-top: 0px;
+		font-size: 65%;
+	}
+}
+@media only screen and (max-width: 420px) {
+	.quote{
+		padding-left: 20px;
+		font-size: 12px;
+	}
+	.quoteAuthor{
+		margin-top: 0px;
+		padding-right: 20px;	
+		font-size: 10px;
+	}
+	.blogTitle{
+		font-weight: 700;
+		color: white;
+		font-size: 30px;
+	}
+	.topImage{
+		display: none;
+		height: 150px;
+		padding: 0px;
+		margin-top: -20px;
+		font-size: 60px;
+	}
+	.sideImage{
+		height: 250px;
+	}
+	.postTitle{
+		text-transform: uppercase;
+		font-style: italic;
+		font-size: 200%
+	}
+	.footer{
+		font-size: 10px;
+	}
+	.col-md-4 img {
+		display: none;
+	}
 }

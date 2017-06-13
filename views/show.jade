@@ -8,4 +8,4 @@ block content
 				a.category(href="/categories/show/#{post.category}") #{post.category} 
 				by by #{post.author} on #{moment(post.date).format('MM/DD/YYYY')}
 			img.postImage(src='/images/uploads/#{post.mainImage}')
-			!=post.body
+			p.postContent!=post.body
